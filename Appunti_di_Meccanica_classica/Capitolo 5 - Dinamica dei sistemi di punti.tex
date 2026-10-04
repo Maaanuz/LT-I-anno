@@ -1,0 +1,358 @@
+\chapter{Dinamica dei sistemi di punti materiali}
+Si consideri un sistema di $n$ punti materiali, con $n>1$, interagenti tra di loto e con il resto dell'Universo. La forza $\vF_i$ agente sull'i-esimo punto è la somma delle forze interne degli altri $n-1$ punti e delle forze esterne agenti sul punto, quindi
+\begin{equation}
+    \vF_i=m_i\va_i=\vF_i^{int}+\vF_i^{ext}.
+\end{equation}
+Questa scomposizione è molto utile, ma dal moto del punto $P$ non è possibile evidenziare i due tipi di forze, in quanto il suo moto è determinato dalla risultante $\vF_i$. La distinzione tra forze interne ed esterne dipende da come viene definito il sistema di punti. Alle forze interne si applica il terzo principio di Newton: se il punto i-esimo esercita sul punto j-esimo una forza $\vF_{i,j}$, allora il punto j-esimo esercita una forza $\vF_{j,i}$ sul punto i-esimo, e tali forze hanno la stessa retta d'azione, stesso modulo, ma verso opposto e possono essere attrattive o repulsive. La somma delle forze che agiscono su tutti i punti del sistema è data da
+\begin{equation}
+    \nsum_i\vF_i=\nsum_i\vF_i^{int}+\nsum_i\vF_i^{ext}.
+\end{equation}
+Tuttavia, anche se in generale la risultante $\vF_i^{int}$ delle forze interne agenti  sull'i-esimo punto è diversa da zero, la risultante di tutte le forze interne del sistema è nulla perché, in base al terzo principio di Newton, esse sono a due uguali ed opposte. Quindi, la somma delle forze agenti su tutti i punti del sistema è data da
+\begin{equation}
+    \nsum_i\vF_i=\nsum_i\vF_i^{ext}.
+\end{equation}
+\begin{obs}
+    Si osservi che il terzo principio di Newton si applica a qualsiasi interazione, anche alle forze esterne. In tal caso, la reazione si applica al resto dell'Universo e non al sistema, di cui si vuole studiare il moto. 
+\end{obs}
+Per ciascun punto $P_i$ di massa $m_i$ sottoposto alla forza $\vF_i$ si possono definire: la posizione $\vr_i$, la velocità $\vv_i$, l'accelerazione $\va_i$, la quantità di moto $\vp_i=m\vv_i$, il momento angolare $\vL_i=\vr_i\times m\vv_i$ e l'energia cinetica $K_i=m_i\vv_i^{\,2}/2$.
+
+Per il sistema complessivo si possono definire: la quantità di moto totale $\vp=\nsum_i\vp_i=\sum_im_i\vv_i$, il momento angolare totale $\vL=\sum_i\vL_i=\sum_i\vr_i\times m_i\vv_i$ e l'energia cinetica totale $K=\sum_iK_i=\sum_im_i\vv_i^{\,2}/2$.
+
+\section{Centro di massa}
+\begin{defn}[centro di massa]
+    Si definisce il centro di massa di un sistema di punti materiali il punto geometrico la cui posizione è individuata, nel sistema di riferimento considerato, dal raggio vettore
+    \begin{equation}
+        \vr_{CM}=\frac{\sum_im_i\vr_i}{\sum_im_i}=\frac{m_1\vr_1+\cdots+m_n\vr_n}{m_1+\cdots+m_n}.
+    \end{equation}
+\end{defn}
+Le componenti di $\rcm$, ovvero le coordinate del centro di massa in un sistema di coordinate cartesiane con origine $O$, sono
+\begin{equation}
+    \xcm=\frac{\sum_im_ix_i}{\sum_im_i},\quad\ycm=\frac{\sum_im_iy_i}{\sum_im_i},\quad\zcm=\frac{\sum_im_iz_i}{\sum_im_i}.
+\end{equation}
+Da queste definizioni, si vede che la ``posizione'' del centro di massa non dipende dal sistema di riferimento, mentre le sue coordinate variano a seconda del sistema prescelto. Se si considera un secondo sistema di riferimento $O'$, le posizioni dei punti $P_i$ sono individuate rispettivamente dai raggi $\vr_i$ e $\vri_i$ con
+\begin{equation}
+    \vr_i=\vri_i+\vr_{O'}.
+\end{equation}
+La posizione del centro di massa rispetto ad $O'$ quindi è
+\begin{equation}
+    \vricm=\frac{\sum_im_i\vri_i}{\sum_im_i}=\frac{\sum_im_i(\vr_i-\vr_{O'})}{\sum_im_i}=\frac{\sum_im_i\vr_i}{\sum_im_i}-\vr_{O'}=\rcm-\vr_{O'}.
+\end{equation}
+Se gli $n$ punti sono in movimento, la posizione del centro di massa varia. In base a tale definizione, la velocità del centro di massa è
+\begin{equation}
+    \vcm=\frac{d\rcm}{dt}=\frac{\sum_im_i\dfrac{d\vr_i}{dt}}{\sum_im_i}=\frac{\sum_im_i\vv_i}{\sum_im_i}=\frac{\vp}{m},
+\end{equation}
+dove $m=\sum_im_i$ è la massa totale del sistema di punti materiali. Dunque, la quantità di moto di un sistema di punti materiali è uguale alla quantità di moto $m\vcm$ del centro di massa, considerato come un punto materiale che abbia  posizione $\rcm$, velocità $\vcm$ e massa pari alla massa totale $m$ del sistema. Analogamente, l'accelerazione del centro di massa è
+\begin{equation}
+    \acm=\frac{d\vcm}{dt}=\frac{\sum_im_i\dfrac{d\vv_i}{dt}}{\sum_im_i}=\frac{\sum_im_i\va_i}{\sum_im_i}=\frac{\sum_im_i\va_i}{m}.
+\end{equation}
+Se il sistema di riferimento è inerziale, allora 
+\begin{equation}
+    m_i\va_i=\vF_i=\vF_i^{int}+\vF_i^{ext},
+\end{equation}
+che sostituita nell'espressione di $\acm$, moltiplicandola per $m$, restituisce
+\begin{equation}
+    m\acm=\sum_im_i\va_i=\sum_i(\vF_i^{int}+\vF_i^{ext})=\sum_i\vF_i^{ext}=\vR^{ext},
+\end{equation}
+dato che la risultante delle forze interne è nulla. Si arriva al seguente teorema.
+\begin{teo}[teorema del centro di massa]
+    Il centro di massa si muove come un punto materiale in cui sia concentrata tutta la massa del sistema e a cui sia applicata la risultante delle forze esterne, ovvero
+    \begin{equation}
+    \label{eq: teorema del centro di massa}
+        \vR^{ext}=m\acm.
+    \end{equation}
+\end{teo}
+Da \eqref{eq: teorema del centro di massa} si ricava anche che
+\begin{equation}
+    \vR^{ext}=m\acm=m\frac{d\vcm}{dt}=\frac{d(m\vcm)}{dt}=\frac{d\vp}{dt},
+\end{equation}
+ovvero che la risultante delle forze esterne è uguale alla derivata temporale della quantità di moto totale del sistema. 
+
+Dunque, il moto del centro di massa è determinato unicamente dalle forze esterne. L'accelerazione delle forze interne non può modificare la stato di moto del centro di massa; invece il moto di ciascun punto dipende dall'azione delle forze esterne ed interne agenti su di esso.
+
+La definizione introdotta di centro di massa è matematica, nel senso che non esiste il punto materiale centro di massa, ma quest'ultima è distribuita nei singoli punti che si muovono sotto l'azione delle forze esterne ed interne. Tuttavia, questo punto matematico gode di notevoli proprietà. Facendo riferimento a $\vp$ e $\vR^{ext}$, si può dire che il centro di massa rappresenta il moto globale o di insieme dei punti materiali. Il fatto che ad un certo istante $\vcm$ abbia un determinato valore significa solamente che il sistema in media si sta spostando in quella data direzione, anche se nessuna delle singole $\vv_i$ coincide con $\vcm$. Analogamente, il fatto che $\acm$ abbia un certo valore a causa dell'azione di $\vR^{ext}$ indica che in media il sistema sta accelerando in quella data direzione. In effetti, $\rcm$, $\vcm$ e $\acm$ sono le medie pesate sulle masse dei raggi vettori, velocità e accelerazioni dei singoli punti e pertanto forniscono informazioni di proprietà medie e non sul moto dei singoli punti. 
+\begin{obs}
+    Si osservi che le relazioni $\vR^{ext}=m\acm$ e $\vp=m\vcm$ del centro di massa coincidono con quelle del punto materiale ideale, di cui il centro di massa è l'esempio migliore, senza approssimazioni sulle dimensioni o sul tipo di moto.
+\end{obs}
+
+\section{Conservazione della quantità di moto}
+Se il sistema di punti è isolato, ossia non è soggetto a forze esterne, oppure l'azione di queste forze è tale che la loto risultante sia nulla, si hanno
+\begin{equation}
+\label{eq: conervazione della quantità di moto}
+    \acm=0,\quad\vcm=costante,\quad\vp=costante.
+\end{equation}
+Questo risultato esprime il seguente teorema.
+\begin{teo}[principio della conservazione della quantità di moto]
+    Quando la risultante della forze esterne è nulla, la quantità di moto totale del sistema rimane costante nel tempo e il centro di massa si muove di moto rettilineo uniforme o resta in quiete. 
+\end{teo}
+L'equazione $\vp=costante$ è una legge vettoriale e si può scomporre in tre relazioni valide per i moti proiettati sugli assi, $p_x=costante$, $p_y=costante$ e $p_z=costante$. Anche se $\Rext=0$, le quantità di moto dei vari punti $m_i\vv_i$ in generale variano nel tempo, mentre resta costante solo la loro somma $\sum_im_i\vv_i$.
+\begin{obs}
+    La conservazione della quantità di moto può avvenire anche solo per una o due delle componenti di $\vp$. 
+\end{obs}
+Si considerino ora due punti isolati che possono interagire solo tra loro, in questo caso
+\begin{equation}
+    \vp=\vp_1+\vp_2=m_1\vv_1+m_2\vv_2.
+\end{equation}
+Derivando $\vp$ rispetto al tempo si ha
+\begin{equation}
+    \frac{d\vp}{dt}=\frac{d}{dt}(m_1\vv_1+m\vv_2)=m_1\va_1+m_2\va_2=\vF_1+\vF_2=0\Rightarrow \vF_1=-\vF_2.
+\end{equation}
+Dunque, il principio di conservazione della quantità di moto per un sistema isolato di due punti ha come conseguenza che le forze tra i due punti sono uguali in modulo ma opposte in verso. Questo risultato non è completamente equivalente al terzo principio di Newton in quanto $\vF_1=-\vF_2$ non implica che le due forze agiscano sulla stessa retta d'azione. Con questa osservazione, si può dire che c'è un'equivalenza tra il principio di conservazione della quantità di moto e il terzo principio di Newton, generalizzabile a sistemi più complessi. 
+\begin{obs}
+    In realtà il principio di conservazione della quantità di moto per un sistema isolato è di portata più generale: si dimostra che questo discende dall'omogeneità dello spazio, ossia dal fatto che non esiste un'origine privilegiata per i sistemi di riferimento. 
+\end{obs}
+Il principio di conservazione della quantità di moto permette anche di definire dinamicamente la massa, indipendentemente dalla forza peso. Si considerino due punti materiali fermi agli estremi di una molla compressa. Dato che il centro di massa è in quiete, la quantità di moto del sistema dei due punti è nulla, $\vp=0$. Lasciando espandere la molla, i due punti si muovono in versi opposti e dato che agiscono durante il moto solo forze interne, continua a valere $\vp=0$. Pertanto, si ha
+\begin{equation}
+    \vp=m_1\vv_1+m_2\vv_2=0\Rightarrow m_2=m_1\frac{\vv_1}{\vv_2}.
+\end{equation}
+Dunque, è possibile misurare il valore di una qualsiasi massa, rispetto ad un campione, tramite misure di velocità. 
+
+\section{Conservazione del momento angolare}
+Si consideri il momento angolare totale di un sistema di punti materiali rispetto ad un polo $O$. Detto $\vr_i$ il raggio vettore $\overline{OP_i}$ si ha
+\begin{equation}
+    \vL=\nsum_i\vr_i\times m\vv_i.
+\end{equation}
+In generale, il polo $O$ può non coincidere con l'origine del sistema di riferimento e può non essere fisso, quindi $\vr_i$ può avere entrambi gli estremi in movimento, con velocità $\vv_i$ e $\vv_O$ nel sistema di riferimento inerziale da cui si osserva il sistema di punti. Derivando $\vL$ rispetto al tempo si ottiene
+\begin{equation}
+    \frac{d\vL}{dt}=\nsum_i\frac{d\vr_i}{dt}\times m_i\vv_i+\nsum_i\vr_i\times m_i\frac{\vv_i}{dt}.
+\end{equation}
+Dato che $\vr_i$ restituisce la posizione di $P_i$ rispetto ad $O$ ed entrambi possono essere in movimento, si ha
+\begin{equation}
+    \frac{d\vr_i}{dt}=\vv_i-\vv_O.
+\end{equation}
+Inoltre, essendo il sistema inerziale si ha 
+\begin{equation}
+    m_i\frac{d\vv_i}{dt}=m_i\va_i=\vF_i^{int}+\vF_i^{ext}.
+\end{equation}
+Ne segue che
+\begin{equation}
+    \begin{split}
+        \frac{d\vL}{dt}&=\nsum_i(\vv_i-\vv_O)\times m_i\vv_i+\nsum_i\vr_i\times(\vF_i^{int}+\vF_i^{ext}) \\
+        &=\nsum_i\vv_i\times m_i\vv_i-\nsum_i\vv_O\times m_i\vv_i+\nsum_i\vr_i\times\vF_i^{int}+\nsum_i\vr_i\times\vF_i^{ext} \\
+        &=-\vv_O\times\vcm+\vM^{int}+\vM^{ext}.
+    \end{split}
+\end{equation}
+Il vettore $\vM^{int}=\nsum_i\vr_i\times\vF_i^{int}$ è il momento delle forze interne, mentre $\vM^{ext}=\nsum_i\vr_i\times\vF_i^{ext}$ è il momento delle forze esterne, entrambi rispetto al polo $O$. 
+
+Si dimostra ora che $\vM^{int}=0$. Considerando due punti $P_i$ e $P_j$, la somma dei momenti delle due forze interne $\vF_{i,j}$ e $\vF_{j,i}$ rispetto al polo $O$ è
+\begin{equation}
+    \vM_{i,j}^{int}=\vr_j\times\vF_{i,j}+\vr_i\times\vF_{j,i}=(\vr_j-\vr_i)\times\vF_{i,j}=\vr_{i,j}\times\vF_{i,j}.
+\end{equation}
+Il vettore $\vr_{i,j}$ è parallelo a $\vF_{i,j}$ e quindi $\vM_{i,j}^{int}=0$. Il momento delle forze interne è costituito dalla somma di tutti i possibili $\vM_{i,j}^{int}=0$ e pertanto risulta anch'esso nullo, $\vM^{int}$, qualunque sia la scelta del polo. Quindi, si ha
+\begin{equation}
+    \frac{d\vL}{dt}=\vM^{ext}-\vv_O\times m\vcm.
+\end{equation}
+\newpage
+\noindent
+Il termine $\vv_O\times m\vcm$ è nullo se:
+\begin{enumerate}
+    \item il polo $O$ è fisso nel sistema di riferimento inerziale, ossia se $\vv_O=0$;
+    \item il centro di massa è in quiete nel sistema di riferimento inerziale, ossia se $\vcm=0$;
+    \item il polo $O$ coincide con il centro di massa, per cui $\vv_O=\vcm$ e $\vv_O\times\vcm=0$;
+    \item $\vv_O\parallel\vcm$.
+\end{enumerate}
+In questi casi si ha
+\begin{equation}
+    \frac{d\vL}{dt}=\vM^{ext}.
+\end{equation}
+Questo risultato costituisce il seguente teorema.
+\begin{teo}[teorema del momento angolare]
+    Se il polo $O$ è fisso nel sistema di riferimento inerziale o coincide con il centro di massa, anche se quest'ultimo non è in generale un punto fisso, l'evoluzione nel tempo del momento angolare del sistema di punti è determinata dal momento delle forze esterne rispetto ad $O$; le forze interne non influenzano $\vL$.
+\end{teo} 
+Se anche il momento delle forze esterne è nullo, risulta
+\begin{equation}
+    \frac{d\vL}{dt}=0\Rightarrow\vL=costante.
+\end{equation}
+Questo risultato costituisce il seguente principio.
+\begin{teo}[principio di conservazione del momento angolare]
+     Se il momento delle forze che agiscono sul sistema è nullo, il momento angolare totale si conserva. 
+\end{teo}
+La condizione $\vM^{ext}=0$ si verifica quando:
+\begin{enumerate}
+    \item non agiscono forze esterne, il sistema è isolato: allora $\vL$ si conserva rispetto a qualsiasi polo per il quale $\vv_O\times m\vcm=0$; in questa situazione, in cui si ha anche $\Rext=0$, si ha pure la conservazione della quantità di moto totale, $\vp=costante$ ($\Rext=0$ non ha come conseguenza, in generale, $\vM^{ext}=0$).
+    \item il momento delle forze esterne è nullo rispetto ad un determinato  polo, ma non rispetto a qualsiasi polo, pure in presenza di forze esterne; pertanto si ha conservazione del momento angolare solo se calcolato rispetto a quel polo (mentre, in generale, non si conserva in tali casi la quantità di moto).
+\end{enumerate}
+L'osservazione sperimentale che, per un sistema isolato, si conserva il momento angolare (rispetto ad un polo per cui $\vv_O\times m\vcm=0$) conferma la validità del teorema del momento angolare e quindi che sia $\vM^{ext}=0$. Infatti, se fosse $\vM^{int}\neq0$, anche in un sistema isolato il momento angolare potrebbe non conservarsi. Di conseguenza, è corretto assumere che le forze interne a due a due abbiano la stessa retta d'azione e quindi costituiscano coppie di forze con braccio nullo. 
+\begin{obs}
+    Il principio di conservazione del momento angolare per un sistema isolato è una proprietà molto generale: si dimostra che discende dalla caratteristica dello spazio di essere isotropo, ossia dal fatto che non esiste una direzione privilegiata.
+\end{obs}
+
+\section{Sistema di riferimento del centro di massa}
+Il sistema di riferimento del centro di massa è uno strumento fondamentale per lo studio della dinamica dei sistemi di punti materiali. Tale sistema ha le seguenti caratteristiche:
+\begin{enumerate}
+    \item l'origine è nel centro di massa;
+    \item gli assi mantengono sempre la stessa direzione rispetto agli assi del sistema inerziale e, in particolare, possono essere assunti a questi;
+    \item si tratta in generale di un sistema non inerziale: infatti il moto del sistema del centro di massa è traslatorio, ma non necessariamente rettilineo e uniforme, ciò avviene solo se $\Rext=0$ cosicché $\acm=0$.
+\end{enumerate}
+\begin{notz}
+    Si indicano con un apice le grandezze relative al sistema del centro di massa.
+\end{notz}
+Per il punto $P_i$ si ha
+\begin{equation}
+    \vr_i=\vri_i+\rcm.
+\end{equation}
+Dal teorema delle velocità relative \eqref{eq: teorema delle velocità relative}, con $\vom=0$, si ha
+\begin{equation}
+    \vv_i=\vvi_i+\vcm.
+\end{equation}
+Avendo assunto il centro di massa come riferimento, evidentemente la posizione e la velocità del centro di massa rispetto a se stesso sono nulle, ossia
+\begin{equation}
+    \vricm=0,\quad\vcm'=0.
+\end{equation}
+Dalla definizione di $\rcm$ e $\vcm$, valide in qualunque sistema di riferimento, segue che
+\begin{equation}
+    \nsum_im_i\vri_i=0,\quad\nsum_im_i\vvi_i=\vpi=0.
+\end{equation}
+Pertanto, la quantità di moto totale $\vpi$ del sistema risulta nulla se misurata nel sistema di riferimento del centro di massa, anche se i singoli termini $m_i\vvi_i$ sono in generale diversi da zero. 
+
+Essendo il sistema del centro di massa non inerziale, sui singoli punti sembra agire anche la forza d'inerzia $-m_i\va_t=-m_i\acm$, in quanto l'accelerazione di trascinamento è pari a quella dell'origine, ossia del centro di massa. Per ogni punto quindi si ha
+\begin{equation}
+    \vF_i^{ext}+\vF_i^{int}-m_i\acm=m_i\vai_i,
+\end{equation}
+da cui, sommando su tutti i punti, si ottiene
+\begin{equation}
+    \Rext-\nsum_im_i\acm=\Rext-m\acm=\nsum_im_i\vai_i=0,
+\end{equation}
+in base a \eqref{eq: teorema del centro di massa}. Quindi, a $\vr_i=\vri_i+\rcm$ e $\vv_i=\vvi_i+\vcm$ si deve aggiungere $\nsum_im_i\vai_i=0$. 
+\newpage
+\noindent
+Infine, per quanto riguarda i momenti si dimostra che:
+\begin{enumerate}
+    \item il momento risultante rispetto al centro di massa nel sistema del centro di massa delle forze interne e di inerzia è uguale al solo momento delle forze esterne $\vM^{'ext}=\sum_i\vr_i\times\vF_i^{ext}$, senza contributi dalle forze di inerzia, dato che il polo è lo stesso (centro di massa). Infatti,
+    \begin{equation}
+        \begin{split}
+            \vM'&=\nsum_i\vri_i\times m_i\vai_i \\
+            &=\nsum_i\vri_i\times(\vF_i^{ext}+\vF_i^{int}-m_i\acm) \\
+            &=\vM'^{ext}-\nsum_im_i\vri_i\times\acm=\vM'^{ext};
+        \end{split}
+    \end{equation}
+    \item dato $\vL'=\sum_i\vri_i\times m_i\vvi_i$, momento angolare rispetto al centro di massa nel sistema del centro di massa, vale la relazione
+    \begin{equation}
+        \frac{d\vL'}{dt}=\vM^{'ext}=\vM^{ext}=\frac{d\vL}{dt}.
+    \end{equation}
+    Quindi, il teorema del momento angolare sussiste anche per le grandezze calcolate nel sistema non inerziale del centro di massa purché come polo si assuma il centro di massa. Infatti,
+    \begin{equation}
+        \begin{split}
+            \vL&=\nsum_i\vri_i\times m_i\vv_i \\
+            &=\nsum_i\vri_i\times m_i(\vvi_i+\vcm) \\
+            &=\nsum_i\vri_i\times m_i\vvi_i+\nsum_i\vri_i\times m_i\vcm \\
+            &=\vL'+\nsum_i\vri_i\times m_i\vcm =\vL'.
+        \end{split}
+    \end{equation}
+\end{enumerate}
+
+\section{Teoremi di K\"onig}
+La conseguenza più importante della definizione del sistema di riferimento del centro di massa sono i teoremi di K\"onig, i quali forniscono, sia per il momento angolare che per l'energia cinetica, una relazione tra il sistema misurato in un sistema inerziale e quello del centro di massa. 
+
+Si assuma per semplicità come polo l'origine del sistema inerziale. Il momento angolare è dato da
+\begin{equation}
+    \vL=\nsum_i\vr_i\times m_i\vv_i.
+\end{equation}
+Usando $\vr_i=\vri_i+\rcm$ e $\vv_i=\vvi_i+\vcm$, questa diventa
+\begin{equation}
+    \begin{split}
+        \vL&=\nsum_i(\vri_i+\rcm)\times m_i(\vvi_i+\vcm) \\
+        &=\nsum_i\vri_i\times m_i\vvi_i+\nsum_i\vri_i\times m_i\vcm+ \\
+        &+\nsum_i\rcm\times m_i\vvi_i+\nsum_i\rcm\times m_i\vcm.
+    \end{split}
+\end{equation}
+Delle quattro sommatorie: la prima corrisponde al momento angolare rispetto al centro di massa $\vL'=\nsum_i\vri_i\times m_i\vvi_i$; la seconda e la terza sono nulle; la quarta rappresenta il momento angolare rispetto all'origine del sistema inerziale, di un punto materiale che ha una massa pari a quella del sistema, coincide con il centro di massa e ha la velocità dello stesso. Pertanto, $\vL_{CM}=\nsum_i\rcm\times m_i\vcm$ viene chiamato momento angolare del centro di massa. Si è arrivati al primo dei teoremi di K\"onig. 
+\begin{teo}[primo teorema di K\"onig]
+    Il momento angolare del sistema si può scrivere, nel sistema di riferimento inerziale, come somma del momento angolare dovuto al moto del centro di massa e di quello del sistema rispetto al centro di massa, ovvero
+    \begin{equation}
+    \label{eq: primo teo. konig}
+        \vL=\vL'+\nsum_i\rcm\times m_i\vcm=\vL'+\vL_{CM}.
+    \end{equation}
+\end{teo}
+L'energia cinetica calcolata nel sistema di riferimento inerziale è
+\begin{equation}
+    K=\nsum_i\frac{1}{2}m_iv_i^2.
+\end{equation}
+Usando $\vv_i=\vvi_i+\vcm$ si ottiene
+\begin{equation}
+    \begin{split}
+         K&=\nsum_i\frac{1}{2}m_i(\vvi_i+\vcm)^2 \\
+         &=\nsum_i\frac{1}{2}m_i(v'_i)^2+\nsum_i\frac{1}{2}m_iv_{CM}^2+\nsum_i\frac{1}{2}m_i(\vvi_i\cdot\vcm).
+    \end{split}
+\end{equation}
+Delle tre sommatorie: la prima rappresenta l'energia cinetica calcolata nel sistema di riferimento del centro di massa $K'=\nsum_im_i(v'_i)^2/2$, ossia l'energia cinetica rispetto al centro di massa; la terza è nulla dato che corrisponde a $(\nsum_im_i\vvi_i)\cdot\vcm=\vpi\cdot\vcm=0$; la seconda rappresenta l'energia cinetica di un punto materiale che possiede tutta la massa del sistema e si muove con la velocità del centro di massa. Pertanto, $K_{CM}=\nsum_im_iv_{CM}^2/2$ viene chiamata energia cinetica del centro di massa. Si è arrivati al secondo dei teoremi di K\"onig.
+\begin{teo}[secondo teorema di K\"onig]
+    L'energia cinetica del sistema di punti si può scrivere, nel sistema di riferimento inerziale, come la somma dell'energia cinetica dovuta al moto del centro di massa e di quella del sistema rispetto al centro di massa, ovvero
+    \begin{equation}
+    \label{eq: secondo teo. konig}
+        K=K'+\nsum_i\frac{1}{2}m_iv_{CM}^2=K'+K_{CM}.
+    \end{equation}
+\end{teo}
+\begin{obs}
+    Per la quantità di moto relazioni come quelle dei teoremi di K\"onig non sussistono, infatti la quantità di moto totale di un sistema è uguale alla quantità di moto del centro di massa, mentre la quantità di moto rispetto al centro di massa è nulla, $\vp=m\vcm$ e $\vp^{\,\prime}=0$. 
+\end{obs}
+Quindi, non è sufficiente conoscere il moto del centro di massa, ossia $\vp$ e $\Rext$, per ricavare $\vL$ e $K$, ma bisogna tenere in conto anche il moto rispetto al centro di massa. Ossia, il moto globale e il moto medio coincidono solo per quanto riguarda la quantità di moto, che è nulla nel moto interno, mentre per quanto riguarda $\vL$ e $K$ si hanno contributi sia dal moto medio che da quello interno. 
+
+Riprendendo le formule \eqref{eq: primo teo. konig} e \eqref{eq: secondo teo. konig}, si discutono i casi di nullità delle varie grandezze. Nel caso del momento angolare, $\vL=\vL'+\rcm\times \vp$ e quindi la nullità di $\vp$ non comporta sempre quella di $\vL$, a differenza di quanto accade per un singolo punto materiale. Il sistema può essere mediamente fermo, $\vcm=0$, però i singoli punti possono essere in moto e può risultare $\vL=0$ come conseguenza di un momento angolare rispetto al centro di massa. Viceversa, $\vL=0$ non implica $\vp=0$, ma soltanto $\vL_{CM}=-\vL'$.
+
+Nel caso dell'energia cinetica, se $\vcm=0$, l'energia cinetica del sistema non è necessariamente nulla, a differenza di quanto avviene per un singolo punto materiale.  Il movimento dei singoli punti può rendere $K'\neq0$. Se però $K=0$, allora devono necessariamente essere nulle sia $K'$ che $K_{CM}$ dato che l'energia cinetica non può essere negativa. 
+
+\section{Teorema dell'energia cinetica}
+L'obiettivo adesso è calcolare il lavoro associato al moto di un sistema di punti materiali. Il lavoro per uno spostamento $\vr_i$ del punto $P_i$ è
+\begin{equation}
+    dW_i=\vF_i\cdot d\vr_i=\vF_i^{int}\cdot d\vr_i+\vF_i^{ext}\cdot d\vr_i=dW_i^{int}+dW_i^{ext}.
+\end{equation}
+Sommando su tutti i punti e integrando lungo le traiettorie $C_i$ percorse si ottiene il lavoro totale come somma del lavoro delle forze interne e quello delle forze esterne, ovvero
+\begin{equation}
+    W=W^{int}+W^{ext}.
+\end{equation}
+In questo caso il contributo delle forze interne non scompare: infatti $dW_i^{int}$ è formato da termini del tipo
+\begin{equation}
+    \vF_{i,j}\cdot d\vr_j+\vF_{j,i}\cdot d\vr_i=\vF_{i,j}\cdot(d\vr_j-d\vr_i)=\vF_{i,j}\cdot\vr_{i,j},
+\end{equation}
+in generale non nulli e con somma diversa da zero. La struttura di $dW^{int}$ implica che al al lavoro delle forze interne è legato un cambiamento delle distanze mutue tra i vari punti. Se queste non potessero cambiare, come avviene per i corpi rigidi, sarebbe $W^{int}=0$. 
+
+Sapendo che $dW_i=m_iv_i\,dv_i$, sommando su tutti su tutti i punti e integrando si ha
+\begin{equation}
+    W_i=\nsum_i\frac{1}{2}m_iv_{i,B}^2-\nsum_i\frac{1}{2}miv_{i,A}^2=K_A-K_B=\Delta K,
+\end{equation}
+che confrontata con la relazione trovata prima si ottiene
+\begin{equation}
+    W^{int}+W^{ext}=\Delta K.
+\end{equation}
+Questo risultato costituisce il teorema seguente.
+\begin{teo}[teorema dell'energia cinetica]
+    Il lavoro complessivo fatto dalle forze esterne ed interne che agiscono su un sistema di punti materiali è uguale alla variazione dell'energia cinetica dello stesso sistema tra la configurazione finale e quella iniziale, ovvero
+    \begin{equation}
+    \label{eq: teo. energia cinetica}
+        W^{int}+W^{ext}=\Delta K.
+    \end{equation}
+\end{teo}
+Se le forze interne sono conservative, il loro lavoro è dato da $W^{int}=-\Delta U^{int}$, analogamente, se anche quelle esterne sono conservative si ha $W^{ext}=-\Delta U^{ext}$. In quest'ultimo caso, si ottiene il principio di conservazione dell'energia meccanica del sistema, infatti, sostituendo queste espressioni in \eqref{eq: teo. energia cinetica}, si ha
+\begin{equation}
+    \begin{split}
+        -\Delta U^{int}-\Delta U^{ext}&=\Delta K\\
+        -\Delta U&=\Delta K \\
+        -U_B+U_A&=K_B-K_A \\
+        U_A+K_A&=U_B+K_B \\
+        E_A&=E_B,
+    \end{split}
+\end{equation}
+dove $\Delta U$ è la variazione dell'energia potenziali di tutte le forze agenti, sia esterne che interne. Se non tutte le forze sono conservative si ha 
+\begin{equation}
+    E_B-E_A=(K_B+U_B)-(K_A+U_A)=W_{NC}.
+\end{equation}
+Anche in assenza di forze esterne non è ovvio che l'energia meccanica si conservi: dipende dalle caratteristiche delle forze interne. 
+\begin{obs}
+    Se si considera tutto ciò che partecipa allo svolgimento di un fenomeno meccanico macroscopico, in generale non si verifica mai che l'energia meccanica si conservi. Tuttavia, nel processo intervengono scambi di energia di altro tipo e, prendendo in esame ogni forma possibile di energia, si trova che l'energia complessiva si conserva. Questo è il contenuto del primo principio della Termodinamica. Invece, nei fenomeni microscopici la situazione è diversa: tutte le interazioni fondamentali sono conservative. Questo fatto si manifesta con la conservazione dell'energia senza eccezioni. Questa legge fondamentale si dimostra discendere dal fatto che non esiste un'origine privilegiata per la misura del tempo.
+\end{obs}
+
+\section{Equazioni cardinali della dinamica}
+Le equazioni del moto di un sistema di punti materiali sono date dal teorema del centro di massa e dal teorema del momento angolare. Queste equazioni prendono il nome di equazioni cardinali della dinamica e, come visto, sono 
+\begin{equation}
+\label{eq: eq. cardinali della dinamica}
+    \Rext=m\acm=\frac{d\vp}{dt},\quad\vM^{ext}=\frac{d\vL}{dt}.
+\end{equation}
+Da queste si possono ricavare informazioni sull'evoluzione temporale di $\vp$ e $\vL$, dovuta rispettivamente all'azione delle forze esterne e dei momenti esterni, riferita a tutto il sistema, ma non sul moto dei singoli punti. Le equazioni \eqref{eq: eq. cardinali della dinamica} sono indipendenti, in quanto per un sistema di forze applicate in punti distinti la risultante e il momento risultante sono grandezze indipendenti. 
+
+Riassumendo, per il teorema dell'energia cinetica, la variazione di energia cinetica è uguale al lavoro compiuto dalle forze agenti, interne ed esterne; se tra queste ce ne sono di non conservative, il corrispondente lavoro è uguale alla variazione dell'energia cinetica. Invece, il calcolo del momento angolare e dell'energia cinetica del sistema viene eseguito tramite i due teoremi di K\"onig, basati sulla scomposizione del moto in moto rispetto al centro di massa e moto del centro di massa. Dalle equazioni \eqref{eq: eq. cardinali della dinamica} e dal teorema dell'energia cinetica derivano tre leggi di conservazione:
+\begin{enumerate}
+    \item se $\Rext=0$, allora si conserva $\vp$;
+    \item se $\vM^{ext}=0$, allora si conserva $\vL$;
+    \item se tutte le forze agenti sono conservative, allora si conserva l'energia meccanica.
+\end{enumerate}
+Queste tre leggi sono indipendenti tra di loro (le prime due proprio perché \eqref{eq: eq. cardinali della dinamica} sono indipendenti): se si conserva una grandezza, non è ovvio che le altre si conservino.

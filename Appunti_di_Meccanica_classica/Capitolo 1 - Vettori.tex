@@ -1,0 +1,61 @@
+\chapter{Vettori}
+Un vettore $\vv$ appartenente a $\mathbb{R}^3$ può essere scritto come combinazione delle sue componenti rispetto ad una base ortonormale $B=(\hatu_x,\hatu_y,\hatu_z)$ di $\mathbb{R}^3$ come
+\begin{equation}\label{eq:scomposizione}
+    \vv=v_x\hatu_x+v_y\hatu_y+v_z\hatu_z.
+\end{equation}
+La derivata di un vettore $\vv$ rispetto ad una al tempo $t$ è definita nel modo seguente.
+\begin{defn}[derivata di un vettore]\label{defn: derivata vettore}
+    La derivata di un vettore $\vv$ rispetto a $t$ è
+    \begin{equation}
+        \frac{d\vv}{dt}=\lim_{\Delta t\to0}{\frac{\Delta \vv}{\Delta t}},
+    \end{equation}
+    dove $\Delta \vv=\vv(t+\Delta t)-\vv(t)$.
+\end{defn}
+Quindi, se $\vv=v_x\hatu_x+v_y\hatu_y+v_z\hatu_z$, si ottiene
+\begin{equation}\label{eq: derivata vettore}
+    \frac{d\vv}{dt}=\frac{dv_x}{dt}\hatu_x+\frac{d\hatu_x}{dt}v_x+\cdots.
+\end{equation}
+Nel caso il sistema non vari nel tempo si ha
+\begin{equation}
+    \frac{d\vv}{dt}=\frac{dv_x}{dt}\hatu_x+\frac{dv_y}{dt}\hatu_y+\frac{dv_z}{dt}\hatu_z.
+\end{equation}
+Secondo la definizione \ref{defn: derivata vettore}, la derivata di un versore $\hatu$ è
+\begin{equation}
+    \frac{d\hatu}{dt}=\lim_{\Delta t\to0}{\frac{\Delta\hatu}{\Delta t}}.
+\end{equation}
+Dato che il versore passando dal tempo $t$ al tempo $t+\Delta t$ descrive un angolo $\theta$, definito da $\theta=S/R$, dove $R$ è il raggio della circonferenza, lo spostamento compiuto $ds$ può essere riscritto come $ds=|\hatu|d\theta=d\theta$. Se $\Delta t\to0$, $d\hatu$ tende ad essere perpendicolare a $\hatu(t)$ e quindi
+\begin{equation}\label{eq: derivata versore}
+    \frac{d\hatu}{dt}=\frac{d\theta}{dt}\hatu_N.
+\end{equation}
+Sostituendo l'equazione \eqref{eq: derivata versore} nell'equazione \eqref{eq: derivata vettore} si ottiene
+\begin{equation}
+    \frac{d\vv}{dt}=\frac{d\vv}{dt}\hatu+v\frac{d\theta}{dt}\hatu_N.
+\end{equation}
+Nel caso un vettore $\vv$ abbia modulo costante si ha
+\begin{equation}
+    \frac{d\vv}{dt}=\vom\times\vv.
+\end{equation}
+Ora si immagini di ruotare gli assi cartesiani rigidamente di un angolo $\theta=\omega t$ così da ottenere due nuovi assi cartesiani $x'$ ed $y'$.
+I nuovi versori $\hatu'_x$ ed $\hatu'_y$ si possono riscrivere come scomposizione dei versori $\hatu_x$ e $\hatu_y$ su i  vecchi assi cartesiani $x$ ed $y$ come
+\begin{equation}
+    \begin{cases}
+        \hatu'_x=\cos{(\omega t)}\hatu_x+\sin{(\omega t)}\hatu_y \\
+        \hatu'_y=\sin{(\omega t)}\hatu_x\cos{(\omega t)}\hatu_y 
+    \end{cases}
+\end{equation}
+Le cui rispettive derivate sono
+\begin{equation}\label{eq: sistema derivate versori}
+    \begin{cases}
+        \dfrac{d\hatu'_x}{dt}=-\omega\sin{(\omega t)}\hatu_x+\omega\cos{(\omega t)}\hatu_y=\omega\hatu'_y \\[1.5ex]
+        \dfrac{d\hatu'_y}{dt}=\omega\cos{(\omega t)}\hatu_x-\omega\sin{(\omega t)}\hatu_y=-\omega\hatu'_y.
+    \end{cases}
+\end{equation}
+Valgono inoltre le relazioni
+\begin{equation}
+    \begin{cases}
+        \hatu'_x\times\hatu'_y=\hatu'_z \\
+        \hatu'_y\times\hatu'_z=\hatu'_x \\
+        \hatu'_z\times\hatu'_x=\hatu'_y,
+    \end{cases}
+\end{equation}
+le quali possono essere sostituite nel sistema \eqref{eq: sistema derivate versori}. 

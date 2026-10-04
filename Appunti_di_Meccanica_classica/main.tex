@@ -1,0 +1,103 @@
+\documentclass[openany]{book}
+
+\usepackage[a4paper,margin=4.72cm]{geometry}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[italian]{babel}
+\usepackage{stackengine}
+\usepackage{graphicx,ifthen}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{bm}
+
+\makeindex
+\title{\textbf{APPUNTI DI MECCANICA CLASSICA}}
+\author{Manuel Gabriele Moretti}
+\date{Febbraio 2025}
+
+\newtheorem{axiom}{Assioma}
+\newtheorem{lem}{Lemma}
+\newtheorem{defn}{Definizione}
+\newtheorem{obs}{Osservazione}
+\newtheorem{ex}{Esempio}
+\newtheorem{notz}{Notazione}
+\newtheorem{corl}{Corollario}
+\newtheorem{teo}{Teorema}
+\theoremstyle{remark}
+\newtheorem{caso}{Caso}
+
+\newcommand{\hatu}{\bm{u}}
+\newcommand{\huT}{\bm{u}_T}
+\newcommand{\huN}{\bm{u}_N}
+\newcommand{\vF}{\bm{F}}
+\newcommand{\vG}{\bm{G}}
+\newcommand{\vR}{\bm{R}}
+\newcommand{\vJ}{\bm{J}}
+\newcommand{\vT}{\bm{T}}
+\newcommand{\vx}{\bm{x}}
+\newcommand{\vN}{\bm{N}}
+\newcommand{\vp}{\bm{p}}
+\newcommand{\vr}{\bm{r}}
+\newcommand{\vs}{\bm{s}}
+\newcommand{\va}{\bm{a}}
+\newcommand{\vg}{\bm{g}}
+\newcommand{\vv}{\bm{v}}
+\newcommand{\vL}{\bm{L}}
+\newcommand{\vM}{\bm{M}}
+\newcommand{\vaT}{\bm{a}_T}
+\newcommand{\vaN}{\bm{a}_N}
+\newcommand{\p}{\partial}
+\newcommand{\vri}{\vr\,'}
+\newcommand{\vom}{\bm{\omega}}
+\newcommand{\valpha}{\bm{\alpha}}
+\newcommand{\nsum}{\sum\nolimits}
+\newcommand{\rcm}{\vr_{CM}}
+\newcommand{\vcm}{\vv_{CM}}
+\newcommand{\acm}{\va_{CM}}
+\newcommand{\xcm}{x_{CM}}
+\newcommand{\ycm}{y_{CM}}
+\newcommand{\zcm}{z_{CM}}
+\newcommand{\vricm}{\vri_{CM}}
+\newcommand{\Rext}{\vR^{ext}}
+\newcommand{\Mext}{\vM^{ext}}
+\newcommand{\xp}{{x'}}
+\newcommand{\yi}{{y'}}
+\newcommand{\zi}{{z'}}
+\newcommand{\vvi}{\vv\,'}
+\newcommand{\vpi}{\vp\,'}
+\newcommand{\vai}{\va\,'}
+\newcommand{\vmedio}[1]{\langle #1\rangle}
+
+\numberwithin{lem}{chapter}
+\numberwithin{axiom}{chapter}
+\numberwithin{teo}{chapter}
+\numberwithin{defn}{chapter}
+\numberwithin{obs}{chapter}
+\numberwithin{ex}{chapter}
+\numberwithin{equation}{chapter}
+
+\begin{document}
+
+\maketitle
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+\include{Capitolo 1 - Vettori}
+\include{Capitolo 2 - Cinematica}
+\include{Capitolo 3 - Dinamica del punto}
+\include{Capitolo 4 - Moti relativi}
+\include{Capitolo 5 - Dinamica dei sistemi di punti}
+\include{Capitolo 6 - Dinamica del corpo rigido}
+\include{Capitolo 7 - Fenomeni d'urto}
+\include{Capitolo 8 - Gravitazione}
+
+\end{document}
